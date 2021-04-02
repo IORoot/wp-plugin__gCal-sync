@@ -1,0 +1,163 @@
+[
+    {
+        "key": "group_605a01d3184bf",
+        "title": "Scheduler Clone",
+        "fields": [
+            {
+                "key": "field_605a024d87eb9",
+                "label": "Schedule",
+                "name": "schedule",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "hide_admin": 0,
+                "collapsed": "field_605a02e087ebb",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_605a07e89802d",
+                        "label": "Enabled",
+                        "name": "enabled",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "15",
+                            "class": "",
+                            "id": ""
+                        },
+                        "hide_admin": 0,
+                        "message": "",
+                        "default_value": 1,
+                        "ui": 1,
+                        "ui_on_text": "",
+                        "ui_off_text": ""
+                    },
+                    {
+                        "key": "field_605a02e087ebb",
+                        "label": "Schedule Label",
+                        "name": "schedule_label",
+                        "type": "text",
+                        "instructions": "Required",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "hide_admin": 0,
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_605a02fb87ebc",
+                        "label": "Schedule Repeats",
+                        "name": "schedule_repeats",
+                        "type": "select",
+                        "instructions": "Required",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "hide_admin": 0,
+                        "choices": {
+                            "1min": "1 Minute",
+                            "2mins": "2 Minutes",
+                            "3mins": "3 Minutes",
+                            "5mins": "5 Minutes",
+                            "10mins": "10 Minutes",
+                            "30mins": "30 Minutes",
+                            "1hour": "1 Hour",
+                            "2hours": "2 Hours",
+                            "3hours": "3 Hours",
+                            "4hours": "4 Hours",
+                            "6hours": "6 Hours",
+                            "12hours": "12 Hours",
+                            "2days": "2 days",
+                            "3days": "3 days",
+                            "1week": "1 week",
+                            "2weeks": "2 weeks",
+                            "4weeks": "4 weeks",
+                            "1month": "1 month",
+                            "3months": "3 months",
+                            "weekly": "Once Weekly",
+                            "wp_convert_yoast_blocks_cron_interval": "Every 5 Minutes",
+                            "wp_convert_schema_posts_cron_interval": "Every 5 Minutes",
+                            "wp_fetch_search_console_data_cron_interval": "Every 5 Minutes",
+                            "wio_1_min": "1 min",
+                            "wio_2_min": "2 min",
+                            "wio_5_min": "5 min",
+                            "wio_10_min": "10 min",
+                            "wio_30_min": "30 min",
+                            "wio_hourly": "60 min",
+                            "wio_daily": "daily",
+                            "hourly": "Once Hourly",
+                            "twicedaily": "Twice Daily",
+                            "daily": "Once Daily",
+                            "none": "None"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "return_format": "value",
+                        "ajax": 0,
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_605a035087ebd",
+                        "label": "Schedule Starts",
+                        "name": "schedule_starts",
+                        "type": "date_time_picker",
+                        "instructions": "Optional",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "hide_admin": 0,
+                        "display_format": "Y-m-d H:i:s",
+                        "return_format": "U",
+                        "first_day": 1
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
