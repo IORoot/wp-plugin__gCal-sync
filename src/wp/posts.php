@@ -74,6 +74,7 @@ class posts
             'recurringEventId' => $this->item->getRecurringEventId(),
             'htmlLink'         => $this->item->getHtmlLink(),
             'title'            => $this->item->getSummary(),
+            'raw_content'      => $this->item->getDescription(),
         ], $this->extra_meta);
 
         $post_arr = [ 
