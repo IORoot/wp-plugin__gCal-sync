@@ -14,7 +14,11 @@ class action_gcal_sync {
     // │                           Kick off the program                          │
     // └─────────────────────────────────────────────────────────────────────────┘
     public function run_gcal_sync(){
-        $cal = new \andyp\gcal\calendar(TRUE);
+        
+        if (file_exists(ANDYP_GCALSYNC_PATH. '/credentials.json'))
+        {
+            $cal = new \andyp\gcal\calendar(TRUE);
+        }
     }
     
 }

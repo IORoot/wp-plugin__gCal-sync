@@ -29,4 +29,7 @@ new andyp\gcal\hooks\action_gcal_sync;
 // ┌─────────────────────────────────────────────────────────────────────────┐
 // │                        	   Initialise    		                     │
 // └─────────────────────────────────────────────────────────────────────────┘
-new andyp\gcal\initialise;
+if (file_exists(ANDYP_GCALSYNC_PATH. '/credentials.json'))
+{
+    new andyp\gcal\initialise;
+}
