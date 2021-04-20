@@ -7,7 +7,7 @@ function save_gcal_options()
 {
     $screen = get_current_screen();
 
-    if ($screen->id != "toplevel_page_gcal_importer") {
+    if ($screen->id != "andyp_page_gcal_importer") {
         return;
     }
         
