@@ -43,6 +43,7 @@ class posts
 
         foreach ( $this->items as $this->item )
         {
+            if ($this->skip_private()){ continue; }
             $this->extra_fields();
             $this->class_injector();
             $this->insert_post();
@@ -50,9 +51,18 @@ class posts
 
     }
 
+    private function skip_private()
+    {
+        if (!$this->options['skip_private_events']){ return false;}
+
+        if ($this->item->getVisibility() == 'private'){ return true; }
+
+        return false;
+    }
 
     private function insert_post()
     {
+
         $this->start = $this->item->getStart();
         $startDateTime = $this->start->getDateTime();
         $startDateTime = str_replace('+01:00','',$startDateTime); // remove DST

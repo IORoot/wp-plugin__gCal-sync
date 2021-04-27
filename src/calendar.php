@@ -2,6 +2,8 @@
 
 namespace andyp\gcal;
 
+use andyp\gcal\acf\acf_update_calendarIds;
+
 class calendar 
 {
 
@@ -9,6 +11,7 @@ class calendar
     private $client;
     private $service;
     private $options;
+    private $calendars;
     private $results;
 
     public function __construct($scheduler = false)
@@ -18,6 +21,7 @@ class calendar
         $this->get_options();
         $this->get_service();
         $this->get_events();
+        $this->get_calendars();
         $this->create_posts();
         $this->trash_old();
         $this->run_scheduler();
@@ -47,6 +51,13 @@ class calendar
     {
         $this->service->get_events();
         $this->results = $this->service->get_results();
+    }
+
+    private function get_calendars()
+    {
+        $this->service->get_calendarList();
+        $this->calendars = $this->service->get_calendars();
+        $cal = new acf_update_calendarIds($this->calendars);
     }
 
     private function create_posts()
